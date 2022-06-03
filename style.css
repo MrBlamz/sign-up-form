@@ -14,7 +14,8 @@
 
 :root {
   --banner-width: 35vw;
-  --content-paddingX: 3rem;
+  --content-paddingX-desktop: 3rem;
+  --content-paddingX-mobile: 1.5rem;
   --input-border-color: #e5e7eb;
   --button-background-color: #596d48;
 }
@@ -36,11 +37,14 @@ body {
 }
 
 .banner__background {
+  position: absolute;
+  top: 0;
   width: 100%;
   height: 100%;
   background-image: url(assets/halie-west-25xggax4bSA-unsplash.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  z-index: -1;
 }
 
 .banner__header {
@@ -73,6 +77,10 @@ body {
   color: #fff;
 }
 
+.banner__background-credit__link {
+  color: #fff;
+}
+
 .banner__background-credit__link:visited {
   color: #fff;
 }
@@ -82,7 +90,7 @@ body {
 }
 
 .content__header {
-  padding: 0 var(--content-paddingX);
+  padding: 0 var(--content-paddingX-desktop);
   font-size: 1.7rem;
   font-weight: bold;
   line-height: 1.4;
@@ -98,7 +106,7 @@ body {
 
 .form {
   background-color: #fff;
-  padding: 1.5rem var(--content-paddingX);
+  padding: 1.5rem var(--content-paddingX-desktop);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
@@ -110,7 +118,7 @@ body {
   display: grid;
   width: fit-content;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 10vw;
+  column-gap: 5vw;
   row-gap: 1rem;
 }
 
@@ -149,7 +157,7 @@ body {
 
 .form__submit-button {
   padding: 10px 30px;
-  margin: 2rem var(--content-paddingX);
+  margin: 2rem var(--content-paddingX-desktop);
   background-color: var(--button-background-color);
   border: 1px solid transparent;
   border-radius: 5px;
@@ -164,7 +172,7 @@ body {
 }
 
 .login-message {
-  margin: 0 var(--content-paddingX);
+  margin: 0 var(--content-paddingX-desktop);
   font-size: 1.1rem;
 }
 
@@ -172,4 +180,110 @@ body {
   text-decoration: none;
   color: var(--button-background-color);
   font-weight: 600;
+}
+
+@media screen and (max-width: 800px) {
+  .grid {
+    grid-template-columns: 100%;
+  }
+
+  .banner {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .banner__header {
+    position: static;
+  }
+
+  .banner__header__logo {
+    width: 3.5rem;
+  }
+
+  .banner__header__title {
+    font-size: 4rem;
+  }
+
+  .banner__background-credit {
+    font-size: 0.85rem;
+    bottom: 10px;
+  }
+
+  .content {
+    padding: 2rem 0;
+  }
+
+  .content__header {
+    padding: 0 var(--content-paddingX-mobile);
+    font-size: 1.3rem;
+    line-height: 1.3;
+  }
+
+  .content__header__secondary-heading {
+    margin-top: 0.8rem;
+  }
+
+  .content__main {
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .form {
+    padding: 1.5rem var(--content-paddingX-mobile);
+  }
+
+  .form__heading {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+  }
+
+  .form__layout {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .form__label {
+    font-size: 0.9rem;
+    text-align: start;
+  }
+
+  .form__input-container {
+    width: 100%;
+  }
+
+  .form__error-message {
+    text-align: start;
+  }
+
+  .form__submit-button {
+    margin: 2rem var(--content-paddingX-mobile);
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .login-message {
+    margin: 0 var(--content-paddingX-mobile);
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .form__layout {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .content__main {
+    text-align: center;
+  }
+
+  .form__layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
