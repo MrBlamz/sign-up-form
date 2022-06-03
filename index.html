@@ -38,7 +38,72 @@
         </p>
       </div>
 
-      <div class="content"></div>
+      <div class="content">
+        <div class="content__header">
+          <p class="content__header__main-heading">
+            This is not a real online service! You know you need something like
+            this in your life to help you realize your deepest dreams.
+            <br />
+            Sign up now to get started.
+          </p>
+          <p class="content__header__secondary-heading">
+            You know you want to.
+          </p>
+        </div>
+        <div class="content__main">
+          <form action="" method="get" class="form" id="form">
+            <h2 class="form__heading">Let's do this!</h2>
+
+            <div class="form__layout">
+              <div class="form__input-container">
+                <label class="form__label" for="first-name">First Name</label>
+                <input class="form__input" type="text" id="first-name" />
+              </div>
+              <div class="form__input-container">
+                <label class="form__label" for="last-name">Last Name</label>
+                <input class="form__input" type="text" id="last-name" />
+              </div>
+              <div class="form__input-container">
+                <label class="form__label" for="email">Email</label>
+                <input class="form__input" type="email" id="email" />
+              </div>
+              <div class="form__input-container">
+                <label class="form__label" for="phone-number"
+                  >Phone Number</label
+                >
+                <input class="form__input" type="text" id="phone-number" />
+              </div>
+              <div class="form__input-container">
+                <label class="form__label" for="password">Password</label>
+                <input
+                  class="form__input form__input--error"
+                  type="password"
+                  id="password"
+                />
+                <span class="form__error-message"
+                  >* Passwords do not match</span
+                >
+              </div>
+              <div class="form__input-container">
+                <label class="form__label" for="password-confirmation"
+                  >Confirm Password</label
+                >
+                <input
+                  class="form__input form__input--error"
+                  type="password"
+                  id="password-confirmation"
+                />
+              </div>
+            </div>
+          </form>
+          <button class="form__submit-button" type="submit" form="form">
+            Create Account
+          </button>
+          <p class="login-message">
+            Already have an account? <a class="login-link" href="#">Log in</a>
+          </p>
+        </div>
+      </div>
     </div>
   </body>
 </html>
