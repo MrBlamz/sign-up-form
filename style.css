@@ -151,8 +151,13 @@ body {
 }
 
 .form__error-message {
+  opacity: 0;
   font-size: 0.8rem;
   color: red;
+}
+
+.form__input--error + .form__error-message {
+  opacity: 1;
 }
 
 .form__submit-button {

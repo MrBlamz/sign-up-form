@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up Form</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
   </head>
   <body>
     <div class="grid">
@@ -75,11 +74,7 @@
               </div>
               <div class="form__input-container">
                 <label class="form__label" for="password">Password</label>
-                <input
-                  class="form__input form__input--error"
-                  type="password"
-                  id="password"
-                />
+                <input class="form__input" type="password" id="password" />
                 <span class="form__error-message"
                   >* Passwords do not match</span
                 >
@@ -89,7 +84,7 @@
                   >Confirm Password</label
                 >
                 <input
-                  class="form__input form__input--error"
+                  class="form__input"
                   type="password"
                   id="password-confirmation"
                 />
@@ -106,4 +101,5 @@
       </div>
     </div>
   </body>
+  <script src="script.js"></script>
 </html>
